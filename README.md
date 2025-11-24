@@ -17,28 +17,28 @@ https://drive.google.com/file/d/1mtrmlc1ouGJ4K7M5yiGghkx9IHeG_yps/view
 # 📸 UI Preview (Screenshots)
 
 ## **1] Login Page**
-![Login Page](/mnt/data/login_page.png)
+![Login Page](E:\OneDrive\PROJECTS\codegenie-app/login_page.png)
 
 ## **2] Sign Up Page**
 ![Sign Up Page](/mnt/data/sign_up .png)
 
 ## **3] AI Chat Assistant**
-![AI Chat](/mnt/data/ai_chat.png)
+![AI Chat](E:\OneDrive\PROJECTS\codegenie-app/ai_chat.png)
 
 ## **4] Code Explainer**
-![Code Explainer](/mnt/data/code_explainer.png)
+![Code Explainer](E:\OneDrive\PROJECTS\codegenie-app/code_explainer.png)
 
 ## **5] Code Generator**
-![Code Generator](/mnt/data/code_generator.png)
+![Code Generator](E:\OneDrive\PROJECTS\codegenie-app/code_generator.png)
 
 ## **6] History Page**
-![History Page](/mnt/data/history_page.png)
+![History Page](E:\OneDrive\PROJECTS\codegenie-app/history_page.png)
 
 ## **7] Profile Page**
-![Profile Page](/mnt/data/profile_page.png)
+![Profile Page](E:\OneDrive\PROJECTS\codegenie-app/profile_page.png)
 
 ## **8] Password Recovery Page**
-![Password Recovery](/mnt/data/password_recovery.png)
+![Password Recovery](E:\OneDrive\PROJECTS\codegenie-app/password_recovery.png)
 
 
 ---
