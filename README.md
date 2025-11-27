@@ -73,7 +73,7 @@
 
 ### 🔧 Application Architecture
 <p align="center">
-  <img src="screenshots/architecture.png" width="800" alt="System Architecture"/>
+  <img src="screenshots/Architecture.png" width="800" alt="System Architecture"/>
 </p>
 
 ### 🗃 Database Schema
@@ -427,7 +427,7 @@ def validate_email(email):
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-| **🔐 Login Page**<br><img src="screenshots/login_page.png" width="200"> | **📝 Sign Up**<br><img src="screenshots/sign_up.png" width="200"> | **🤖 AI Chat**<br><img src="screenshots/ai_chat.png" width="200"> |
+| **🔐 Login Page**<br><img src="screenshots/login_page.png" width="200"> | **📝 Sign Up**<br><img src="screenshots/sign_up .png" width="200"> | **🤖 AI Chat**<br><img src="screenshots/ai_chat.png" width="200"> |
 | **🧠 Code Explainer**<br><img src="screenshots/code_explainer.png" width="200"> | **⚡ Code Generator**<br><img src="screenshots/code_generator.png" width="200"> | **📊 History**<br><img src="screenshots/history_page.png" width="200"> |
 | **👤 Profile**<br><img src="screenshots/profile_page.png" width="200"> | **🔒 Password Recovery**<br><img src="screenshots/password_recovery.png" width="200"> | **🛠 Admin Dashboard**<br><img src="screenshots/admin_dashboard.png" width="200"> |
 
