@@ -479,13 +479,13 @@ model_config = {
 | Status | Feature | Timeline |
 |--------|---------|----------|
 | ✅ | **Core Platform** | Completed |
-| ✅ | **Docker Support** | Completed |
+| ⏳ | **Docker Support** | Working |
 | ✅ | **HuggingFace Integration** | Completed |
-| 🔄 | **VS Code Extension** | Q2 2024 |
-| 🔄 | **Visual AST Explorer** | Q3 2024 |
-| ⏳ | **GitHub Integration** | Q4 2024 |
-| ⏳ | **PDF Export** | Q1 2025 |
-| ⏳ | **Multi-repo Analysis** | Q2 2025 |
+| ✅ | **VS Code Extension** | Completed |
+| ✅ | **Visual AST Explorer** |Completed|
+| ✅ | **GitHub Integration** | Completed |
+| ✅ | **PDF Export** | Completed |
+| ✅ | **Multi-repo Analysis** | Completed |
 
 </div>
 
