@@ -493,7 +493,19 @@ model_config = {
 
 ## 🤝 Contributing
 
-We love contributions! Here's how you can help:
+<div align="center">
+
+| Team Members | 🎯 Contribution |
+|------------------------------|----------------------|
+| Sarvesh Kulkarni | ✅ Backend & code generation,explanation |
+| Samya Mehta  | ✅ UI/UX * Share chat|
+| Raman Singh  | ✅  Admin side |
+| Patoju Karthikeya| ✅ **Modular architecture**  |
+|Nikitha P Srivatsa| ✅ **Graph & feedback**  |
+| Adilakshmi Samireddi| ✅ **Profile Page**  |
+| Kondrapu Kalyani Raj | ✅ **Ai Chat**  |
+
+</div>
 
 ### 🐛 Report a Bug
 1. Check existing [issues](https://github.com/sarveshkulkarni2023/Infosys_Springboard_V.0/issues)
