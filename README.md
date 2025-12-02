@@ -34,11 +34,14 @@
 </div>
 
 ## 🌟 Featured In
+
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Infosys_logo.svg/1280px-Infosys_logo.svg.png" width="200"/>
-  <br>
-  <b>Infosys Springboard Internship Program</b>
+  <img src="screenshots/infosys.png" width="220">
+  <br/>
+  <strong>Infosys Springboard Internship Program</strong>
 </p>
+
+
 
 ---
 
@@ -70,16 +73,6 @@
 ---
 
 ## 🏗 System Architecture
-
-### 🔧 Application Architecture
-<p align="center">
-  <img src="screenshots/Architecture.png" width="800" alt="System Architecture"/>
-</p>
-
-### 🗃 Database Schema
-<p align="center">
-  <img src="screenshots/ER_diagram.png" width="800" alt="ER Diagram"/>
-</p>
 
 ### 🎯 Architecture Highlights
 
@@ -166,19 +159,10 @@ Python Backend Modules:
 </tr>
 
 <tr>
-<td>📝 <b>CodeBERT</b></td>
-<td>Code Understanding</td>
-<td>
-<code>microsoft/codebert-base</code>
-</td>
-<td>⭐️⭐️⭐️⭐️☆</td>
-</tr>
-
-<tr>
-<td>🦙 <b>CodeLlama</b></td>
+<td>🦙 <b>gemma</b></td>
 <td>Multi-language Code</td>
 <td>
-<code>codellama/CodeLlama-7b-hf</code>
+<code>gemma/gemma</code>
 </td>
 <td>⭐️⭐️⭐️⭐️⭐️</td>
 </tr>
@@ -258,28 +242,64 @@ client = InferenceClient(api_key=os.getenv("HUGGINGFACE_API_KEY"))
 ```bash
 CodeGenie/
 │
-├── 🎯 app.py                    # Main Streamlit Application
+├── notebooks/
+│   └── CodeGenie_Colab_Complete.ipynb      # Your prototype / experimental code
 │
-├── 🔧 backend/
-│   ├── auth.py                 # JWT Authentication & OTP
-│   ├── generator.py            # Code Generation Engine
-│   ├── explainer.py            # AI Explanation Logic
-│   ├── ast_engine.py           # Python AST Parser
-│   ├── history.py              # Session History Management
-│   ├── feedback.py             # Rating & Analytics System
-│   ├── admin.py                # Admin Panel Functions
-│   └── models.py               # Database Models
+├── src/
+│   ├── __init__.py
+│   ├── core/
+│   │   ├── model_loader.py                 # Load / switch models (GPT, LLaMA, CodeGemma)
+│   │   ├── code_generator.py               # Generate code
+│   │   ├── code_explainer.py               # Explain code
+│   │   ├── evaluator.py                    # Evaluate quality, run tests
+│   │   └── utils.py                        # Common helper utilities
+│   │
+│   ├── pipelines/
+│   │   ├── codegen_pipeline.py             # Full flow: prompt → model → code → summary
+│   │   └── explain_pipeline.py             # Full flow: code → explanation → complexity
+│   │
+│   ├── storage/
+│   │   ├── history_manager.py              # Store attempts, runs, logs
+│   │   ├── cache_manager.py                # Cache model outputs
+│   │   └── db.sqlite3                      # Local DB (if needed)
+│   │
+│   ├── api/
+│   │   ├── __init__.py
+│   │   ├── server.py                       # FastAPI / Flask backend
+│   │   ├── routes_codegen.py               # /generate endpoint
+│   │   └── routes_explain.py               # /explain endpoint
+│   │
+│   └── ui/
+│       ├── web/
+│       │   ├── index.html
+│       │   ├── styles.css
+│       │   └── app.js
+│       └── streamlit/
+│           ├── main.py                     # Streamlit frontend (if you use it)
+│           ├── components.py
+│           └── theme.json
 │
-├── 📄 requirements.txt         # Python Dependencies
-├── 🐳 Dockerfile              # Container Configuration
-├── 🔧 .env.example            # Environment Template
+├── config/
+│   ├── settings.yaml                       # App config (model, temperature, API keys)
+│   ├── logging.conf                        # Logging setup
+│   └── prompts/                            # Reusable model prompts
+│       ├── codegen_prompt.txt
+│       └── explain_prompt.txt
 │
-└── 📸 screenshots/            # Documentation Assets
-    ├── architecture.png       # System Architecture
-    ├── ER_diagram.png        # Database Schema
-    ├── banner.gif           # Animated Banner
-    ├── divider.gif          # Section Dividers
-    └── *.png               # UI Screenshots
+├── tests/
+│   ├── test_codegen.py
+│   ├── test_explainer.py
+│   └── test_api.py
+│
+├── data/
+│   ├── examples/                           # Example code snippets for testing
+│   └── logs/
+│       └── history.json                    # Execution history
+│
+├── requirements.txt
+├── README.md
+├── LICENSE
+└── run.py                                  # Entry point to start the app
 ```
 
 ---
@@ -444,12 +464,12 @@ def validate_email(email):
 MODEL_CONFIG = {
     "code_generation": {
         "primary": "deepseek-ai/deepseek-coder-1.3b",
-        "fallback": "codellama/CodeLlama-7b-hf"
+        "fallback": "google/gemma-2b"
     },
     "explanation": {
         "python": "microsoft/phi-2",
-        "javascript": "microsoft/codebert-base",
-        "sql": "microsoft/codebert-base"
+        "javascript": "google/gemma-2b",
+        "sql": "google/gemma-2b"
     },
     "chat": {
         "primary": "microsoft/phi-2",
@@ -479,7 +499,7 @@ model_config = {
 | Status | Feature | Timeline |
 |--------|---------|----------|
 | ✅ | **Core Platform** | Completed |
-| ⏳ | **Docker Support** | Working |
+| ✅ | **Docker Support** | Completed |
 | ✅ | **HuggingFace Integration** | Completed |
 | ✅ | **VS Code Extension** | Completed |
 | ✅ | **Visual AST Explorer** |Completed|
@@ -491,21 +511,7 @@ model_config = {
 
 ---
 
-## 🤝 Contributing
-
-<div align="center">
-
-| Team Members | 🎯 Contribution |
-|------------------------------|----------------------|
-| Sarvesh Kulkarni | ✅ Backend & code generation,explanation |
-| Samya Mehta  | ✅ UI/UX * Share chat|
-| Raman Singh  | ✅  Admin side |
-| Patoju Karthikeya| ✅ **Modular architecture**  |
-|Nikitha P Srivatsa| ✅ **Graph & feedback**  |
-| Adilakshmi Samireddi| ✅ **Profile Page**  |
-| Kondrapu Kalyani Raj | ✅ **Ai Chat**  |
-
-</div>
+## 🤝 Contributing:- 
 
 ### 🐛 Report a Bug
 1. Check existing [issues](https://github.com/sarveshkulkarni2023/Infosys_Springboard_V.0/issues)
@@ -554,7 +560,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 💫 Made with ❤️ during Infosys Springboard Internship
 
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Infosys_logo.svg/1280px-Infosys_logo.svg.png" width="150"/>
+  <img src="screenshots/infosys.png" width="220">width="150"/>
 </p>
 
 **CodeGenie** - Transforming how developers understand and write code, one AI-powered insight at a time.
