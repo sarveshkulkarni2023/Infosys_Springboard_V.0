@@ -159,19 +159,10 @@ Python Backend Modules:
 </tr>
 
 <tr>
-<td>📝 <b>CodeBERT</b></td>
-<td>Code Understanding</td>
-<td>
-<code>microsoft/codebert-base</code>
-</td>
-<td>⭐️⭐️⭐️⭐️☆</td>
-</tr>
-
-<tr>
-<td>🦙 <b>CodeLlama</b></td>
+<td>🦙 <b>gemma</b></td>
 <td>Multi-language Code</td>
 <td>
-<code>codellama/CodeLlama-7b-hf</code>
+<code>gemma/gemma</code>
 </td>
 <td>⭐️⭐️⭐️⭐️⭐️</td>
 </tr>
@@ -473,12 +464,12 @@ def validate_email(email):
 MODEL_CONFIG = {
     "code_generation": {
         "primary": "deepseek-ai/deepseek-coder-1.3b",
-        "fallback": "codellama/CodeLlama-7b-hf"
+        "fallback": "google/gemma-2b"
     },
     "explanation": {
         "python": "microsoft/phi-2",
-        "javascript": "microsoft/codebert-base",
-        "sql": "microsoft/codebert-base"
+        "javascript": "google/gemma-2b",
+        "sql": "google/gemma-2b"
     },
     "chat": {
         "primary": "microsoft/phi-2",
@@ -569,7 +560,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 💫 Made with ❤️ during Infosys Springboard Internship
 
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Infosys_logo.svg/1280px-Infosys_logo.svg.png" width="150"/>
+  <img src="screenshots/infosys.png" width="220">width="150"/>
 </p>
 
 **CodeGenie** - Transforming how developers understand and write code, one AI-powered insight at a time.
